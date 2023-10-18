@@ -13,9 +13,10 @@ const defaultValues: EntityPayload = {
   number: '',
 };
 
+
 const validationSchema = yup.object({
   email: yup.string().trim().email('Must be a valid email').required('Required!'),
-  number: yup.string().length(8),
+  number: yup.string().trim(),
 });
 
 export const Form: FC<FormTypes> = ({ onSubmit }) => {
